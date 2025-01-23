@@ -1,48 +1,24 @@
 body {
-  font-family: Times New Roman;
-  font-size: 1.2rem;
-  line-height: 2rem; 
-  background-color: #18181b;
-  color: #f1f0ef;
-  text-align: center;
+  margin: 32px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: auto auto auto;   
+h1 {
+  font-size: 1.5rem;
 }
 
-h1,
-h2 {
-  color: #991f36;
+p {
+  margin: 8px 0;
 }
 
-a {
-  color: #0077cc;
+.window {
+  margin-bottom: 16px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: auto; 
-  }
-
-  body {
-    margin: 10px; 
-    font-size: 1rem; 
-  }
+.tabs menu {
+  margin-bottom: 8px;
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem; /
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  body {
-    font-size: 0.9rem;
-  }
+#certifications p,
+#projects p {
+  margin: 4px 0;
 }
