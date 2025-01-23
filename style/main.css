@@ -1,5 +1,9 @@
+
 body {
-  background-image: url('style/xp.jpg');
+  background-image: url('https://raw.githubusercontent.com/levent1ozgur/site/refs/heads/main/style/xp.jpg');
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 32px;
 }
 
