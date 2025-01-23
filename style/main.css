@@ -1,5 +1,6 @@
 body {
   font-family: Times New Roman;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin: 20px;
   background-color: #18181b;
@@ -9,7 +10,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   gap: 20px; 
 }
 
