@@ -22,3 +22,12 @@ p {
 #projects p {
   margin: 4px 0;
 }
+
+#move {
+  position: absolute;
+  cursor: grab;
+}
+
+#move:active {
+  cursor: grabbing;
+}
