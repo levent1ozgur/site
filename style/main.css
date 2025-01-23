@@ -1,0 +1,49 @@
+body {
+  font-family: Times New Roman;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #18181b;
+  color: #f1f0ef;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px; 
+}
+
+h1,
+h2 {
+  color: #991f36;
+}
+
+a {
+  color: #0077cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: auto; 
+  }
+
+  body {
+    margin: 10px; 
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+}
