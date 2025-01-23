@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curriculum Vitae - Levent Özgür</title>
   <link rel="stylesheet" href="https://unpkg.com/xp.css" />
-  <link rel="stylesheet" href="style/main.css" />
-   <script src="js/main.js"></script> 
+  <link rel="stylesheet" href="style/main.css" />   
 </head>
 
 <body>
@@ -136,5 +135,22 @@
     </div>
   </section>
 </body>
+<script>
+document.querySelectorAll('[role="tab"]').forEach((tab) => {
+  tab.addEventListener("click", (event) => {
+ 
+    document
+      .querySelectorAll('[role="tab"]')
+      .forEach((t) => t.setAttribute("aria-selected", "false"));
+    document
+      .querySelectorAll('[role="tabpanel"]')
+      .forEach((panel) => (panel.hidden = true));
 
+    const selectedTab = event.currentTarget;
+    selectedTab.setAttribute("aria-selected", "true");
+    const panelId = selectedTab.getAttribute("aria-controls");
+    document.getElementById(panelId).hidden = false;
+  });
+});
+</script> 
 </html>
