@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Vitae - Levent Özgür</title>
+  <title>Curriculum Vitae - Levent Özgür - </title>
   <link rel="stylesheet" href="https://unpkg.com/xp.css" />
   <link rel="stylesheet" href="style/main.css" />
 </head>
@@ -324,13 +324,13 @@ function createPopup() {
   // Add the title bar
   popup.innerHTML = `
     <div class="title-bar">
-      <div class="title-bar-text">A Window With Stuff In It</div>
+      <div class="title-bar-text">Notification</div>
       <div class="title-bar-controls">
         <button aria-label="Close"></button>
       </div>
     </div>
     <div class="window-body">
-      <p>Do you want to close this website?</p>
+      <p>Website will be close!</p>
     </div>
     <section class="field-row" style="justify-content: flex-end; padding: 0 8px 8px 8px">
       <button id="popup-ok">OK</button>
@@ -363,7 +363,7 @@ mainCloseButton.addEventListener("click", createPopup);
 // For title slide
     (function() {
             let titleText = document.title;
-            let sliderText = titleText + " "; // Add a space for smooth sliding effect
+            let sliderText = titleText; // Add a space for smooth sliding effect
             let i = 0;
 
             function slideTitle() {
