@@ -7,25 +7,12 @@ body {
   margin: 32px;
 }
 
-h1 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin: 8px 0;
-}
-
 .window {
   margin-bottom: 16px;
 }
 
 .tabs menu {
   margin-bottom: 8px;
-}
-
-#certifications p,
-#projects p {
-  margin: 4px 0;
 }
 
 #move {
