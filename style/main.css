@@ -1,25 +1,30 @@
-
 body {
-  background-image: url('https://raw.githubusercontent.com/levent1ozgur/site/refs/heads/main/style/xp.jpg');
-  background-attachment:fixed;
+  background-image: url("https://raw.githubusercontent.com/levent1ozgur/site/refs/heads/main/style/xp.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 32px;
+}
+article,
+legend {
+  font-size: 1.5em;
+  font-family: Times New Roman;
+}
+li {
+  font-size: 1.2rem;
+  font-family: Times New Roman;
 }
 
 .window {
   margin-bottom: 16px;
 }
-
 .tabs menu {
   margin-bottom: 8px;
 }
 
-#move {
-  position: absolute;
-  cursor: grab;
+#move .title-bar {
+  cursor: grab; /* Change cursor to 'move' only on the title bar */
 }
-
-#move:active {
-  cursor: grabbing;
+#move .title-bar:active {
+  cursor: grabbing; /* Change cursor to 'move' only on the title bar */
 }
