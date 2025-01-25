@@ -14,10 +14,11 @@
     <section class="tabs window" style="width: 700px;">
       <div class="title-bar">
         <div class="title-bar-text">Resume Details</div>
-        <div class="title-bar-controls">          
-          <button aria-label="Close"></button>
+        <div class="title-bar-controls">
+          <button aria-label="Close" onclick="playSound()"></button>
         </div>
       </div>
+      <audio id="closeSound" src="https://github.com/levent1ozgur/site/blob/main/style/WindowsXP-Error-Sound.mp3" preload="auto"></audio>
       <div class="window-body">
         <menu role="tablist" aria-label="Resume Sections">
           <button role="tab" aria-selected="true" aria-controls="tab-info">Info</button>
@@ -48,134 +49,134 @@
         <article role="tabpanel" hidden id="tab-technical-skills">
           <fieldset>
             <legend>Technical Skills</legend>
-          <ul class="tree-view">
-            <li>
-              <details open>
-                <summary>Artificial Intelligence Tools</summary>
-                <ul>
-                  <li>Leonardo AI</li>
-                  <li>Dall-E</li>
-                  <li>ChatGPT</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Development Tools</summary>
-                <ul>
-                  <li>Netlify</li>
-                  <li>GitHub</li>
-                  <li>Git</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Web Development Skills</summary>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Responsive Design</li>
-                  <li>SQL</li>
-                  <li>WordPress</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Operating Systems & Office Tools</summary>
-                <ul>
-                  <li>Windows OS</li>
-                  <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Hardware & Software Skills</summary>
-                <ul>
-                  <li>Computer Hardware</li>
-                  <li>Hardware Installation</li>
-                  <li>Software Installation</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Research & Search Skills</summary>
-                <ul>
-                  <li>Googling</li>
-                  <li>Technology Research</li>
-                </ul>
-              </details>
-            </li>
-          </ul>
+            <ul class="tree-view">
+              <li>
+                <details open>
+                  <summary>Artificial Intelligence Tools</summary>
+                  <ul>
+                    <li>Leonardo AI</li>
+                    <li>Dall-E</li>
+                    <li>ChatGPT</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Development Tools</summary>
+                  <ul>
+                    <li>Netlify</li>
+                    <li>GitHub</li>
+                    <li>Git</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Web Development Skills</summary>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Responsive Design</li>
+                    <li>SQL</li>
+                    <li>WordPress</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Operating Systems & Office Tools</summary>
+                  <ul>
+                    <li>Windows OS</li>
+                    <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Hardware & Software Skills</summary>
+                  <ul>
+                    <li>Computer Hardware</li>
+                    <li>Hardware Installation</li>
+                    <li>Software Installation</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Research & Search Skills</summary>
+                  <ul>
+                    <li>Googling</li>
+                    <li>Technology Research</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
           </fieldset>
         </article>
         <article role="tabpanel" hidden id="tab-soft-skills">
           <fieldset>
             <legend>Soft Skills</legend>
-          <ul class="tree-view">
-            <li>
-              <details open>
-                <summary>Creativity & Innovation</summary>
-                <ul>
-                  <li>Creative Thinking</li>
-                  <li>Creative Writing</li>
-                  <li>Creativity</li>
-                  <li>Problem Solving</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Communication Skills</summary>
-                <ul>
-                  <li>Oral Communication</li>
-                  <li>Communication</li>
-                  <li>Blogging</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Collaboration & Teamwork</summary>
-                <ul>
-                  <li>Teamwork</li>
-                  <li>Content Management</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Productivity & Efficiency</summary>
-                <ul>
-                  <li>Attention to Detail</li>
-                  <li>Time Management</li>
-                  <li>Typing</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Prompt Engineering</summary>
-                <ul>
-                  <li>Prompt Tailoring</li>
-                  <li>Prompt</li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Technology & Digital Skills</summary>
-                <ul>
-                  <li>Text To Image</li>
-                  <li>Game Mechanics</li>
-                  <li>Gaming</li>
-                </ul>
-              </details>
-            </li>
-          </ul>
+            <ul class="tree-view">
+              <li>
+                <details open>
+                  <summary>Creativity & Innovation</summary>
+                  <ul>
+                    <li>Creative Thinking</li>
+                    <li>Creative Writing</li>
+                    <li>Creativity</li>
+                    <li>Problem Solving</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Communication Skills</summary>
+                  <ul>
+                    <li>Oral Communication</li>
+                    <li>Communication</li>
+                    <li>Blogging</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Collaboration & Teamwork</summary>
+                  <ul>
+                    <li>Teamwork</li>
+                    <li>Content Management</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Productivity & Efficiency</summary>
+                  <ul>
+                    <li>Attention to Detail</li>
+                    <li>Time Management</li>
+                    <li>Typing</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Prompt Engineering</summary>
+                  <ul>
+                    <li>Prompt Tailoring</li>
+                    <li>Prompt</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Technology & Digital Skills</summary>
+                  <ul>
+                    <li>Text To Image</li>
+                    <li>Game Mechanics</li>
+                    <li>Gaming</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
           </fieldset>
         </article>
         <article role="tabpanel" hidden id="tab-certifications">
@@ -192,45 +193,45 @@
         <article role="tabpanel" hidden id="tab-projects">
           <fieldset>
             <legend>Projects</legend>
-          <ul class="tree-view">
-            <li>
-              <details open>
-                <summary>Tools</summary>
-                <ul>
-                  <li><a href="https://okutagon.netlify.app/" target="_blank">Okutagon</a></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Games</summary>
-                <ul>
-                  <li><a href="https://codepen.io/levent1ozgur/full/pvzLEGg" target="_blank">Space Maneuvering Game</a></li>
-                  <li><a href="https://codepen.io/levent1ozgur/full/LYvRXpB" target="_blank">Rock Paper Scissors Lizard Spock</a></li>
-                  <li><a href="https://codepen.io/levent1ozgur/full/GRLNjWN" target="_blank">Click Me</a></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Generators</summary>
-                <ul>
-                  <li><a href="https://codepen.io/levent1ozgur/full/xxeEQEz" target="_blank">Advice Generator</a></li>
-                  <li><a href="https://codepen.io/levent1ozgur/full/LEPgzOZ" target="_blank">Random Character Depiction</a></li>
-                  <li><a href="https://codepen.io/levent1ozgur/full/azoQdKR" target="_blank">Random Prompt Depiction</a></li>
-                  <li><a href="https://codepen.io/levent1ozgur/full/PoyQWLW" target="_blank">Background Generator</a></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>PhotoBlog</summary>
-                <ul>
-                  <li><a href="https://the-ai-artisan.netlify.app/" target="_blank">The AI Artisan</a></li>
-                </ul>
-              </details>
-            </li>
-          </ul>
+            <ul class="tree-view">
+              <li>
+                <details open>
+                  <summary>Tools</summary>
+                  <ul>
+                    <li><a href="https://okutagon.netlify.app/" target="_blank">Okutagon</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Games</summary>
+                  <ul>
+                    <li><a href="https://codepen.io/levent1ozgur/full/pvzLEGg" target="_blank">Space Maneuvering Game</a></li>
+                    <li><a href="https://codepen.io/levent1ozgur/full/LYvRXpB" target="_blank">Rock Paper Scissors Lizard Spock</a></li>
+                    <li><a href="https://codepen.io/levent1ozgur/full/GRLNjWN" target="_blank">Click Me</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Generators</summary>
+                  <ul>
+                    <li><a href="https://codepen.io/levent1ozgur/full/xxeEQEz" target="_blank">Advice Generator</a></li>
+                    <li><a href="https://codepen.io/levent1ozgur/full/LEPgzOZ" target="_blank">Random Character Depiction</a></li>
+                    <li><a href="https://codepen.io/levent1ozgur/full/azoQdKR" target="_blank">Random Prompt Depiction</a></li>
+                    <li><a href="https://codepen.io/levent1ozgur/full/PoyQWLW" target="_blank">Background Generator</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>PhotoBlog</summary>
+                  <ul>
+                    <li><a href="https://the-ai-artisan.netlify.app/" target="_blank">The AI Artisan</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
           </fieldset>
           <br>
           <em>All of them built with AI, including this website</em> &#128579;
@@ -263,32 +264,28 @@
 </body>
 
 <script>
- const moveDiv = document.getElementById("move");
-const titleBar = moveDiv.querySelector(".title-bar"); // Target the title bar
-let isDragging = false;
-let offsetX, offsetY;
-
-// Add event listeners to the title bar for drag functionality
-titleBar.addEventListener("mousedown", (event) => {
-  isDragging = true;
-  offsetX = event.clientX - moveDiv.offsetLeft;
-  offsetY = event.clientY - moveDiv.offsetTop;
-  moveDiv.style.position = "absolute";
-  moveDiv.style.zIndex = 1000; // Ensure it's above other elements
-});
-
-document.addEventListener("mousemove", (event) => {
-  if (!isDragging) return;
-  const newX = event.clientX - offsetX;
-  const newY = event.clientY - offsetY;
-  moveDiv.style.left = `${newX}px`;
-  moveDiv.style.top = `${newY}px`;
-});
-
-document.addEventListener("mouseup", () => {
-  isDragging = false;
-});
-
+  const moveDiv = document.getElementById("move");
+  const titleBar = moveDiv.querySelector(".title-bar"); // Target the title bar
+  let isDragging = false;
+  let offsetX, offsetY;
+  // Add event listeners to the title bar for drag functionality
+  titleBar.addEventListener("mousedown", (event) => {
+    isDragging = true;
+    offsetX = event.clientX - moveDiv.offsetLeft;
+    offsetY = event.clientY - moveDiv.offsetTop;
+    moveDiv.style.position = "absolute";
+    moveDiv.style.zIndex = 1000; // Ensure it's above other elements
+  });
+  document.addEventListener("mousemove", (event) => {
+    if (!isDragging) return;
+    const newX = event.clientX - offsetX;
+    const newY = event.clientY - offsetY;
+    moveDiv.style.left = `${newX}px`;
+    moveDiv.style.top = `${newY}px`;
+  });
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
   document.querySelectorAll('[role="tab"]').forEach((tab) => {
     tab.addEventListener("click", (event) => {
       // Deselect all tabs and hide all panels
@@ -305,24 +302,21 @@ document.addEventListener("mouseup", () => {
       document.getElementById(panelId).hidden = false;
     });
   });
-
-// Select the main "Close" button
-const mainCloseButton = document.querySelector('[aria-label="Close"]');
-
-// Function to create the pop-up window
-function createPopup() {
-  // Create the pop-up container
-  const popup = document.createElement("div");
-  popup.className = "window";
-  popup.style.width = "300px";
-  popup.style.position = "absolute";
-  popup.style.top = "50%";
-  popup.style.left = "50%";
-  popup.style.transform = "translate(-50%, -50%)";
-  popup.style.zIndex = "1001";
-
-  // Add the title bar
-  popup.innerHTML = `
+  // Select the main "Close" button
+  const mainCloseButton = document.querySelector('[aria-label="Close"]');
+  // Function to create the pop-up window
+  function createPopup() {
+    // Create the pop-up container
+    const popup = document.createElement("div");
+    popup.className = "window";
+    popup.style.width = "300px";
+    popup.style.position = "absolute";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+    popup.style.zIndex = "1001";
+    // Add the title bar
+    popup.innerHTML = `
     <div class="title-bar">
       <div class="title-bar-text">Notification</div>
       <div class="title-bar-controls">
@@ -337,48 +331,45 @@ function createPopup() {
       <button id="popup-cancel">Cancel</button>
     </section>
   `;
+    // Append the pop-up to the document body
+    document.body.appendChild(popup);
+    // Add event listeners to the pop-up buttons
+    const okButton = document.getElementById("popup-ok");
+    const cancelButton = document.getElementById("popup-cancel");
+    const closeButton = popup.querySelector('[aria-label="Close"]');
+    // "OK" button: Close the website
+    okButton.addEventListener("click", () => {
+      window.close(); // Attempt to close the website (may be blocked by browser settings)
+    });
+    // "Cancel" button and "Close" button: Close the pop-up
+    const closePopup = () => document.body.removeChild(popup);
+    cancelButton.addEventListener("click", closePopup);
+    closeButton.addEventListener("click", closePopup);
+  }
+  // Add event listener to the main "Close" button
+  mainCloseButton.addEventListener("click", createPopup);
+  //Error sound
+  function playSound() {
+    const sound = document.getElementById('closeSound');
+    sound.play();
+  }
+  // For title slide
+  (function() {
+    let titleText = document.title;
+    let sliderText = titleText + " "; // Add a space for smooth sliding effect
+    let i = 0;
 
-  // Append the pop-up to the document body
-  document.body.appendChild(popup);
-
-  // Add event listeners to the pop-up buttons
-  const okButton = document.getElementById("popup-ok");
-  const cancelButton = document.getElementById("popup-cancel");
-  const closeButton = popup.querySelector('[aria-label="Close"]');
-
-  // "OK" button: Close the website
-  okButton.addEventListener("click", () => {
-    window.close(); // Attempt to close the website (may be blocked by browser settings)
-  });
-
-  // "Cancel" button and "Close" button: Close the pop-up
-  const closePopup = () => document.body.removeChild(popup);
-  cancelButton.addEventListener("click", closePopup);
-  closeButton.addEventListener("click", closePopup);
-}
-
-// Add event listener to the main "Close" button
-mainCloseButton.addEventListener("click", createPopup);
-
-// For title slide
-    (function() {
-            let titleText = document.title;
-            let sliderText = titleText + " "; // Add a space for smooth sliding effect
-            let i = 0;
-
-            function slideTitle() {
-                // Slide the title text
-                document.title = sliderText.slice(i) + sliderText.slice(0, i);
-                i = (i + 1) % sliderText.length; // Loop through the text
-
-                // Reset the position when the title has fully moved
-                if (i === 0) {
-                    document.title = titleText; // Reset title back to original
-                }
-            }
-
-            setInterval(slideTitle, 150); // Adjust timing for the slide speed
-        })();
+    function slideTitle() {
+      // Slide the title text
+      document.title = sliderText.slice(i) + sliderText.slice(0, i);
+      i = (i + 1) % sliderText.length; // Loop through the text
+      // Reset the position when the title has fully moved
+      if (i === 0) {
+        document.title = titleText; // Reset title back to original
+      }
+    }
+    setInterval(slideTitle, 150); // Adjust timing for the slide speed
+  })();
 </script>
 
 </html>
