@@ -361,19 +361,24 @@ function createPopup() {
 mainCloseButton.addEventListener("click", createPopup);
 
 // For title slide
- (function() {
+    (function() {
             let titleText = document.title;
-            let sliderText = titleText;
+            let sliderText = titleText + " "; // Add a space for smooth sliding effect
             let i = 0;
 
             function slideTitle() {
+                // Slide the title text
                 document.title = sliderText.slice(i) + sliderText.slice(0, i);
                 i = (i + 1) % sliderText.length; // Loop through the text
+
+                // Reset the position when the title has fully moved
+                if (i === 0) {
+                    document.title = titleText; // Reset title back to original
+                }
             }
 
             setInterval(slideTitle, 150); // Adjust timing for the slide speed
         })();
-
 </script>
 
 </html>
