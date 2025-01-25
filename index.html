@@ -14,9 +14,7 @@
     <section class="tabs window" style="width: 700px;">
       <div class="title-bar">
         <div class="title-bar-text">Resume Details</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
+        <div class="title-bar-controls">          
           <button aria-label="Close"></button>
         </div>
       </div>
@@ -256,30 +254,32 @@
 </body>
 
 <script>
-  // Add drag functionality for the #move element
-  const moveDiv = document.getElementById("move");
-  let isDragging = false;
-  let offsetX, offsetY;
-  moveDiv.addEventListener("mousedown", (event) => {
-    isDragging = true;
-    // Get the initial mouse position and element's offset
-    offsetX = event.clientX - moveDiv.offsetLeft;
-    offsetY = event.clientY - moveDiv.offsetTop;
-    moveDiv.style.position = "absolute";
-    moveDiv.style.zIndex = 1000; // Ensure it's above other elements
-  });
-  document.addEventListener("mousemove", (event) => {
-    if (!isDragging) return;
-    // Calculate new position of the div
-    const newX = event.clientX - offsetX;
-    const newY = event.clientY - offsetY;
-    // Update the div's position
-    moveDiv.style.left = `${newX}px`;
-    moveDiv.style.top = `${newY}px`;
-  });
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-  });
+ const moveDiv = document.getElementById("move");
+const titleBar = moveDiv.querySelector(".title-bar"); // Target the title bar
+let isDragging = false;
+let offsetX, offsetY;
+
+// Add event listeners to the title bar for drag functionality
+titleBar.addEventListener("mousedown", (event) => {
+  isDragging = true;
+  offsetX = event.clientX - moveDiv.offsetLeft;
+  offsetY = event.clientY - moveDiv.offsetTop;
+  moveDiv.style.position = "absolute";
+  moveDiv.style.zIndex = 1000; // Ensure it's above other elements
+});
+
+document.addEventListener("mousemove", (event) => {
+  if (!isDragging) return;
+  const newX = event.clientX - offsetX;
+  const newY = event.clientY - offsetY;
+  moveDiv.style.left = `${newX}px`;
+  moveDiv.style.top = `${newY}px`;
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+
   document.querySelectorAll('[role="tab"]').forEach((tab) => {
     tab.addEventListener("click", (event) => {
       // Deselect all tabs and hide all panels
@@ -296,6 +296,61 @@
       document.getElementById(panelId).hidden = false;
     });
   });
+
+// Select the main "Close" button
+const mainCloseButton = document.querySelector('[aria-label="Close"]');
+
+// Function to create the pop-up window
+function createPopup() {
+  // Create the pop-up container
+  const popup = document.createElement("div");
+  popup.className = "window";
+  popup.style.width = "300px";
+  popup.style.position = "absolute";
+  popup.style.top = "50%";
+  popup.style.left = "50%";
+  popup.style.transform = "translate(-50%, -50%)";
+  popup.style.zIndex = "1001";
+
+  // Add the title bar
+  popup.innerHTML = `
+    <div class="title-bar">
+      <div class="title-bar-text">A Window With Stuff In It</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Do you want to close this website?</p>
+    </div>
+    <section class="field-row" style="justify-content: flex-end; padding: 0 8px 8px 8px">
+      <button id="popup-ok">OK</button>
+      <button id="popup-cancel">Cancel</button>
+    </section>
+  `;
+
+  // Append the pop-up to the document body
+  document.body.appendChild(popup);
+
+  // Add event listeners to the pop-up buttons
+  const okButton = document.getElementById("popup-ok");
+  const cancelButton = document.getElementById("popup-cancel");
+  const closeButton = popup.querySelector('[aria-label="Close"]');
+
+  // "OK" button: Close the website
+  okButton.addEventListener("click", () => {
+    window.close(); // Attempt to close the website (may be blocked by browser settings)
+  });
+
+  // "Cancel" button and "Close" button: Close the pop-up
+  const closePopup = () => document.body.removeChild(popup);
+  cancelButton.addEventListener("click", closePopup);
+  closeButton.addEventListener("click", closePopup);
+}
+
+// Add event listener to the main "Close" button
+mainCloseButton.addEventListener("click", createPopup);
+
 </script>
 
 </html>
