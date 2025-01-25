@@ -1,0 +1,14 @@
+body {
+  background-color: #18181b;
+}
+
+button {
+  background-color: #991f36;
+  color: #f1f0ef;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: default;
+  position: absolute;
+  transition: top 0.5s ease, left 0.5s ease;
+}
