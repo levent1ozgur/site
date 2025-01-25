@@ -5,21 +5,16 @@ body {
   background-size: cover;
   margin: 32px;
 }
+
 article,
 legend {
   font-size: 1.5em;
   font-family: Times New Roman;
 }
+
 li {
   font-size: 1.2rem;
   font-family: Times New Roman;
-}
-
-.window {
-  margin-bottom: 16px;
-}
-.tabs menu {
-  margin-bottom: 8px;
 }
 
 #move .title-bar {
