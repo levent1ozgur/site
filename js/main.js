@@ -161,3 +161,6 @@
       isDragging = false;
     });
   }
+
+popup.parentNode.removeChild(popup); // Fully removes the popup
+popup = null; // Ensures it's not retained in memory
