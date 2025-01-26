@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/main.css" />
+  <title>Background Generator</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Character Background Generator</h1>
+    <div>
+      <h2>Occupation:</h2>
+      <select id="occupation">
+        <option value="piracy" data-attribute="STR +1, AGI +1">Piracy</option>
+        <option value="privateering" data-attribute="STR +1, AGI +1">Privateering</option>
+        <option value="trading" data-attribute="INT +1, CHA +1">Trading</option>
+        <option value="smuggling" data-attribute="AGI +1, INT +1">Smuggling</option>
+        <option value="fishing" data-attribute="STR +1, AGI +1">Fishing</option>
+        <option value="farming" data-attribute="STR +1">Farming</option>
+        <option value="shipbuilding" data-attribute="STR +1, INT +1">Shipbuilding and repair</option>
+        <option value="naval" data-attribute="STR +1, AGI +1">Naval and military service</option>
+        <option value="craftsmanship" data-attribute="STR +1, INT +1">Craftsmanship</option>
+        <option value="entertainment" data-attribute="CHA +2">Entertainment</option>
+      </select>
+    </div>
+    <div>
+      <h2>Early Life:</h2>
+      <select id="early-life">
+        <option value="page" data-attribute="STR +1, CHA +1">Page</option>
+        <option value="apprentice" data-attribute="STR +1, INT +1">Apprentice</option>
+        <option value="assistant" data-attribute="INT +1, CHA +1">Assistant</option>
+        <option value="urchin" data-attribute="AGI +1, INT +1">Urchin</option>
+        <option value="steppe-child" data-attribute="STR +1, AGI +1">Steppe Child</option>
+      </select>
+    </div>
+    <div>
+      <h2>Reason for Adventuring:</h2>
+      <select id="reason">
+        <option value="revenge" data-attribute="STR +2">Revenge</option>
+        <option value="loss" data-attribute="CHA +2">Loss</option>
+        <option value="wanderlust" data-attribute="AGI +2">Wanderlust</option>
+        <option value="forced-out" data-attribute="STR +1, INT +1">Forced out</option>
+        <option value="money" data-attribute="AGI +1, INT +1">Money</option>
+      </select>
+    </div>
+    <div>
+      <h2>Attributes:</h2>
+      <ul id="attribute-list">
+        <!-- attributes will be shown here -->
+      </ul>
+    </div>
+    <div id="background-story">
+      <!-- Background story will be shown here -->
+    </div>
+  </div>
+
+</body>
+<script src="js/main.js"></script>
+</html>
