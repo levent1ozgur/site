@@ -4,22 +4,34 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Load the asteroid image
+// Resize canvas on window resize
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // Keep the spaceship in bounds after resizing
+  if (ship.x > canvas.width - ship.size / 2) ship.x = canvas.width - ship.size / 2;
+  if (ship.y > canvas.height - ship.size / 2) ship.y = canvas.height - ship.size / 2;
+
+  // Reinitialize asteroids to fit new canvas size
+  initAsteroids();
+});
+
+// Load images (same as before)
 const asteroidImage = new Image();
 asteroidImage.src =
   "https://raw.githubusercontent.com/levent1ozgur/projects/refs/heads/main/assets/asteroid.png";
 
-// Load the spaceship image
 const spaceshipImage = new Image();
 spaceshipImage.src =
   "https://raw.githubusercontent.com/levent1ozgur/projects/refs/heads/main/assets/spaceship.png";
 
-// Game settings
+// Game settings (same as before)
 const ship = {
   x: canvas.width / 2,
   y: canvas.height - 100,
-  size: 50, // Size for the spaceship image
-  speed: 5
+  size: 50,
+  speed: 5,
 };
 
 const asteroids = [];
@@ -39,7 +51,7 @@ function initAsteroids() {
   for (let i = 0; i < asteroidCount; i++) {
     asteroids.push({
       x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height - canvas.height
+      y: Math.random() * canvas.height - canvas.height,
     });
   }
 }
