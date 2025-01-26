@@ -3,23 +3,22 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 32px;
+  margin: calc(2vw + 16px);
 }
-
+summary {
+  font-weight: bold;
+}
 article,
-legend {
-  font-size: 1.5em;
-  font-family: Times New Roman;
-}
-
+legend,
 li {
-  font-size: 1.2rem;
-  font-family: Times New Roman;
+  font-size: calc(0.8vw + 1vh);
+  font-family: "Times New Roman", Times, serif;
 }
 
 #move .title-bar {
   cursor: grab; /* Change cursor to 'move' only on the title bar */
 }
+
 #move .title-bar:active {
   cursor: grabbing; /* Change cursor to 'move' only on the title bar */
 }
