@@ -162,5 +162,58 @@
     });
   }
 
+// Function to create and display the pop-up window
+  function openHelpPopup() {
+    // Create the pop-up window container
+    const helpWindow = document.createElement('div');
+    helpWindow.classList.add('window');
+    helpWindow.style.width = '300px';
+
+    // Create the title bar
+    const titleBar = document.createElement('div');
+    titleBar.classList.add('title-bar');
+
+    // Create the title text
+    const titleText = document.createElement('div');
+    titleText.classList.add('title-bar-text');
+    titleText.textContent = 'Credit';
+
+    // Create the title bar controls (close button)
+    const titleBarControls = document.createElement('div');
+    titleBarControls.classList.add('title-bar-controls');
+
+    const closeButton = document.createElement('button');
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.textContent = '';
+    closeButton.addEventListener('click', () => {
+      helpWindow.remove(); // Close the pop-up
+    });
+
+    // Append elements to the title bar
+    titleBarControls.appendChild(closeButton);
+    titleBar.appendChild(titleText);
+    titleBar.appendChild(titleBarControls);
+
+    // Create the body of the window
+    const windowBody = document.createElement('div');
+    windowBody.classList.add('window-body');
+    const content = document.createElement('p');
+    content.innerHTML = 'Made with <a href="https://botoxparty.github.io/XP.css/" target="_blank" rel="noopener noreferrer">xp.css</a> by Adam Hammad and Jordan Scales. Licensed under the MIT License.';
+    windowBody.appendChild(content);
+
+    // Append title bar and body to the pop-up window
+    helpWindow.appendChild(titleBar);
+    helpWindow.appendChild(windowBody);
+
+    // Append the pop-up window to the body of the document
+    document.body.appendChild(helpWindow);
+  }
+
+  // Get the help button
+  const helpButton = document.querySelector('[aria-label="Help"]');
+
+  // Add event listener to the help button
+  helpButton.addEventListener('click', openHelpPopup);
+
 popup.parentNode.removeChild(popup); // Fully removes the popup
 popup = null; // Ensures it's not retained in memory
