@@ -20,11 +20,11 @@ window.addEventListener("resize", () => {
 // Load images (same as before)
 const asteroidImage = new Image();
 asteroidImage.src =
-  "https://raw.githubusercontent.com/levent1ozgur/projects/refs/heads/main/assets/asteroid.png";
+  "style/asteroid.png";
 
 const spaceshipImage = new Image();
 spaceshipImage.src =
-  "https://raw.githubusercontent.com/levent1ozgur/projects/refs/heads/main/assets/spaceship.png";
+  "style/spaceship1.png";
 
 // Game settings (same as before)
 const ship = {
